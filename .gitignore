@@ -1,0 +1,26 @@
+# Backend
+todo-backend/target/
+todo-backend/*.iml
+todo-backend/.mvn/
+todo-backend/mvnw
+todo-backend/mvnw.cmd
+
+# Frontend
+todo-frontend/node_modules/
+todo-frontend/dist/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Misc
+*.log
+version_check.txt
+where_check.txt
+mvn_output.txt

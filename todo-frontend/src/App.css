@@ -1,0 +1,254 @@
+.app {
+    max-width: 680px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+}
+
+/* ── Header ── */
+.app-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.app-header h1 {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: #16213e;
+}
+
+.subtitle {
+    color: #6c757d;
+    margin-top: 0.25rem;
+    font-size: 0.95rem;
+}
+
+/* ── Form ── */
+.todo-form {
+    background: #fff;
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    margin-bottom: 1.5rem;
+}
+
+.todo-form h2 {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    color: #16213e;
+}
+
+.form-group {
+    margin-bottom: 0.75rem;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 0.65rem 0.85rem;
+    border: 1.5px solid #dee2e6;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    font-family: inherit;
+    transition: border-color 0.2s;
+    resize: vertical;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #4361ee;
+    box-shadow: 0 0 0 3px rgba(67, 97, 238, 0.12);
+}
+
+.form-actions {
+    display: flex;
+    gap: 0.5rem;
+}
+
+/* ── Buttons ── */
+.btn {
+    padding: 0.55rem 1.1rem;
+    border: none;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.1s;
+}
+
+.btn:active {
+    transform: scale(0.97);
+}
+
+.btn-primary {
+    background-color: #4361ee;
+    color: #fff;
+}
+
+.btn-primary:hover {
+    background-color: #3a56d4;
+}
+
+.btn-secondary {
+    background-color: #e9ecef;
+    color: #495057;
+}
+
+.btn-secondary:hover {
+    background-color: #dee2e6;
+}
+
+/* ── Controls (filters + count) ── */
+.controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.filter-group {
+    display: flex;
+    gap: 0.35rem;
+}
+
+.btn-filter {
+    padding: 0.4rem 0.85rem;
+    background: #e9ecef;
+    color: #495057;
+    font-size: 0.82rem;
+}
+
+.btn-filter.active {
+    background-color: #4361ee;
+    color: #fff;
+}
+
+.todo-count {
+    font-size: 0.85rem;
+    color: #6c757d;
+}
+
+/* ── Todo List ── */
+.todo-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+}
+
+/* ── Todo Item ── */
+.todo-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    background: #fff;
+    padding: 1rem 1.15rem;
+    border-radius: 10px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
+    transition: box-shadow 0.2s, opacity 0.2s;
+}
+
+.todo-item:hover {
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.todo-item.completed {
+    opacity: 0.6;
+}
+
+.todo-item.completed .todo-title {
+    text-decoration: line-through;
+    color: #6c757d;
+}
+
+.todo-checkbox input[type='checkbox'] {
+    width: 20px;
+    height: 20px;
+    margin-top: 3px;
+    cursor: pointer;
+    accent-color: #4361ee;
+}
+
+.todo-content {
+    flex: 1;
+    min-width: 0;
+}
+
+.todo-title {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 0.2rem;
+    word-break: break-word;
+}
+
+.todo-description {
+    font-size: 0.88rem;
+    color: #6c757d;
+    margin-bottom: 0.3rem;
+    word-break: break-word;
+}
+
+.todo-date {
+    font-size: 0.75rem;
+    color: #adb5bd;
+}
+
+.todo-actions {
+    display: flex;
+    gap: 0.3rem;
+    flex-shrink: 0;
+}
+
+.btn-edit,
+.btn-delete {
+    background: none;
+    border: none;
+    font-size: 1.1rem;
+    cursor: pointer;
+    padding: 0.25rem;
+    border-radius: 6px;
+    transition: background-color 0.15s;
+}
+
+.btn-edit:hover {
+    background-color: #e8f0fe;
+}
+
+.btn-delete:hover {
+    background-color: #fde8e8;
+}
+
+/* ── States ── */
+.empty-state {
+    text-align: center;
+    padding: 2.5rem 1rem;
+    color: #6c757d;
+    font-size: 0.95rem;
+}
+
+.loading {
+    text-align: center;
+    padding: 2rem;
+    color: #6c757d;
+}
+
+.error-message {
+    background: #fff3cd;
+    color: #856404;
+    padding: 0.75rem 1rem;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+}
+
+/* ── Responsive ── */
+@media (max-width: 500px) {
+    .app {
+        padding: 1rem 0.75rem;
+    }
+
+    .controls {
+        flex-direction: column;
+        gap: 0.5rem;
+        align-items: flex-start;
+    }
+}
